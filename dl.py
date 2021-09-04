@@ -33,11 +33,9 @@ if inp == "Y" or inp == "y" or inp == "yes":
             print(f"SKIPPED {x}")
             continue
 
-        os.system(f'ffmpeg -loglevel panic -i ./{dl_folder}/{f}/"{x}" ./{dl_folder}/{f}/"{artist} - {song}.mp3"') #this line takes a while!! why??
+        os.system(f'ffmpeg -loglevel panic -i ./{dl_folder}/{f}/"{x}" ./{dl_folder}/{f}/"{artist} - {song}.mp3"')
         print(f"CONVERTED {x} -> {artist} - {song}.mp3")
-        os.system(f'rm ./{dl_folder}/{f}/"{x}"') # maybe i should rmeove them all after? idk
+        os.system(f'rm ./{dl_folder}/{f}/"{x}"')
         print(f"REMOVED {x}")
-    
-    #os.system(f"rm ./{dl_folder}/{f}/*.mp4") # will crash on windows.. probably?
 
     print("\nOpen format.py to format metadata now!")

@@ -25,10 +25,3 @@ mp3.save
 print("\nSAVED\n")
 
 input("---\n\nPRESS ENTER TO LEAVE PROGRAM\n")
-
-### Create MP3File instance
-#mp3 = MP3File("./dl/short/Cavetown - Advice.mp3")
-
-#mp3.artist = "uwu moment <3"
-
-#mp3.save()
