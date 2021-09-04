@@ -1,7 +1,7 @@
 from pytube import Playlist, YouTube
 import os
 
-dl_folder = "dl" # Please don't change if you're going to push into the repo.
+dl_folder = "dl" # If you change here, change in format.py too
 
 p = Playlist(input("Enter playlist link:\n "))
 f = input(f"Folder name (without / at the end):\n ./{dl_folder}/")
@@ -19,7 +19,7 @@ for url in p.video_urls:
 
 print("\nDone!\n")
 
-inp = input("Would you like to format your songs' metadata after converting to mp3? (will crash without ffmpeg) (y/n)\n ")
+inp = input("Would you like to format your songs' names and convert to mp3? (will crash without ffmpeg) (y/n)\n ")
 if inp == "Y" or inp == "y" or inp == "yes":
     print("\nFiles will be named 'ARTIST - SONG_NAME'. I hope that's ok with you.\n")
     artist = input("What is the artist name?\n ")
@@ -39,3 +39,5 @@ if inp == "Y" or inp == "y" or inp == "yes":
         print(f"REMOVED {x}")
     
     #os.system(f"rm ./{dl_folder}/{f}/*.mp4") # will crash on windows.. probably?
+
+    print("\nOpen format.py to format metadata now!")
