@@ -38,4 +38,7 @@ if inp == "Y" or inp == "y" or inp == "yes":
         os.system(f'rm ./{dl_folder}/{f}/"{x}"')
         print(f"REMOVED {x}")
 
-    print("\nOpen format.py to format metadata now!")
+    inp = input("Would you like to open format.py to format the metadata now?")
+    if inp == "Y" or inp == "y" or inp == "yes":
+        print("\nOpening format.py to format metadata now!")
+        os.system("python format.py")
