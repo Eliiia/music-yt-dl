@@ -29,7 +29,7 @@ if inp == "Y" or inp == "y" or inp == "yes":
         song = input("What's the name of the song ('SKIP' to delete the file)? ")
         
         if(song == "SKIP" or song == "skip"):
-            os.system(f'rm ./{dl_folder}/{f}/"{x}"')
+            os.remove(f'./{dl_folder}/{f}/"{x}"')
             print(f"SKIPPED {x}")
             continue
 
